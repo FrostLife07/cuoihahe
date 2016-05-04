@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var ngApp =  angular.module('app');
+    var ngApp = angular.module('app');
     ngApp.controller('MainCtrl', MainCtrl);
 
     MainCtrl.$inject = ['$scope', '$state', 'Auth', '$modal', 'looksAPI', 'scrapeAPI', '$alert', 'Upload'];
@@ -130,7 +130,8 @@
         };
 
 
-        $scope.addScrapePost = function () {
+        $scope.addScrapePost = function (type) {
+            type = typeof type !== undefined ? type : 'image';
             var look = {
                 description: $scope.look.description,
                 title: $scope.look.title,
@@ -138,6 +139,7 @@
                 linkURL: $scope.look.link,
                 email: $scope.user.email,
                 name: $scope.user.name,
+                type: type,
                 _creator: $scope.user._id
             };
 
@@ -192,11 +194,15 @@
                     });
 
         };
-        
+
         //vanlam
-        $scope.tabLink = 'app/main/addLookTabs/pinterest-link.html';
-        $scope.lookTab = function(tabLink){
-            $scope.tabLink = tabLink;
+        var tabUrl = 'app/main/addLookTabs/';
+        $scope.tabLink = tabUrl + 'pinterest-link.html';
+        $scope.lookTab = function (tabLink) {
+            $scope.tabLink = tabUrl + tabLink;
+        };
+        $scope.isLtActive = function (currLink) {
+            return (tabUrl + currLink) === $scope.tabLink;
         };
     }
 })();

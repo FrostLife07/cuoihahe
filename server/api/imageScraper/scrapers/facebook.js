@@ -13,10 +13,13 @@ exports.list = function (url, cb) {
             var $ = cheerio.load(body);
             var pin = {};
             var $url = url;
-
-            // Get data from pinterest link
-            var $img = $('.heightContainer img').attr('src');
-            var $desc = $('.heightContainer img').attr('alt');
+            // Get data from facebook link
+            var elimg = $('#u_0_h .img');
+            if(elimg.length === 0){
+                elimg = $('#u_0_w .img');
+            }
+            var $img = elimg.attr('src');
+            var $desc = elimg.attr('alt');
 
             console.log($img + '  pint url');
 

@@ -1,5 +1,5 @@
 var nodemailer = require('nodemailer');
-var user = require('./api/user/user.controller.js')
+var user = require('./api/user/user.controller.js');
 
 var transporter = nodemailer.createTransport({
     service: 'Gmail',

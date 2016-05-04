@@ -11,6 +11,7 @@ var LookSchema = new Schema({
     tags: [{
             type: String
         }],
+    type: String,
     _creator: {
         type: Schema.ObjectId,
         ref: 'User'

@@ -4,19 +4,26 @@ var scrapers = {};
 
 scrapers['pinterest'] = require('./scrapers/pinterest');
 
-exports.scrape = function(req, res) {
-  var url = req.body.url;
-  var scraperToUse;
+scrapers['facebook'] = require('./scrapers/facebook');
+scrapers['youtube'] = require('./scrapers/youtube');
 
-  if(url.indexOf('pinterest') > -1) {
-    scraperToUse = 'pinterest';
-  } else {
-    console.log('Cannot locate scraper');
-  }
+exports.scrape = function (req, res) {
+    var url = req.body.url;
+    var scraperToUse;
 
-  scrapers[scraperToUse].list(url, function(data) {
-    console.log('Data from scraper: ', data);
-    res.json(data);
-  });
+    if (url.indexOf('pinterest') > -1) {
+        scraperToUse = 'pinterest';
+    } else if (url.indexOf('facebook') > -1) {
+        scraperToUse = 'facebook';
+    } else if (url.indexOf('youtube')){
+        scraperToUse = 'youtube';
+    }else{
+        console.log('Cannot locate scraper');
+    }
+
+    scrapers[scraperToUse].list(url, function (data) {
+        console.log('Data from scraper: ', data);
+        res.json(data);
+    });
 
 };

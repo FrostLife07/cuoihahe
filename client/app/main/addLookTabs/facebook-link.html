@@ -1,8 +1,35 @@
-<h5 class="mtitle">Add image/video from Facebook link</h5>
-<div class="form-group">
-    <input type="text" class="form-control" placeholder="Title" ng-model="look.title">
-</div>
-<div class="form-group">
-    <input type="text" placeholder="Link (facebook)" ng-model="look.link">
-</div>
-<input type="hidden" value="facebook" ng-model="look.type">
+
+<form ng-submit="addScrapePost()">
+
+    <h5 class="mtitle">Add image/video from Facebook link</h5>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Title" ng-model="look.title">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Link (facebook)" ng-model="look.link">
+    </div>
+    <input type="hidden" value="facebook" ng-model="look.type">
+
+    <div class="col-md-6" id="alertContainer"></div>
+
+    <div class="listing-details"
+         ng-show="showScrapeDetails">
+        <div class="form-group">
+            <div class="row listing-description-row">
+                <label for="description" class="col-xs-12">Description</label>
+            </div>
+            <textarea class="form-control" rows="3" ng-model="look.description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <div class="listing-image">
+                <img src="{{look.imgThumb}}" class="img-thumbnail img-responsive">
+            </div>
+        </div>
+        <button type="submit"
+                class="btn btn-primary">Submit</button>
+        <button type="button"
+                class="btn btn-default"
+                ng-click="$hide()">Cancel</button>
+    </div>
+</form>
