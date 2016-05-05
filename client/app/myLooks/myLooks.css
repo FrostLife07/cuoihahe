@@ -8,11 +8,10 @@
   color: #333333;
 }
 .likeCount {
-  font-size: 20px;
+  font-size: 14px;
   margin-left: 3px;
 }
 .icon-like {
-  margin-left: 10px
 }
 .description-textarea {
   margin-left: 10px;

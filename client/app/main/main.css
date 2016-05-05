@@ -1,3 +1,6 @@
+body{
+    background: #e7e7e7;
+}
 .listing-image img {
     max-height: 300px;
     max-width: 300px;
@@ -46,7 +49,7 @@
     -o-transition: all .6s ease-out;
     transition: all .6s ease-out;
     overflow: hidden;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -57,8 +60,8 @@
     -webkit-transition: opacity 0.6s ease-out;
     transition: opacity 0.6s ease-out;
     background-color: #fff;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+/*    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;*/
     opacity: 0;
     visibility: hidden;
 }
@@ -67,24 +70,26 @@
     opacity: 1;
 }
 .titleClass {
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
     border-top: none;
-    padding: 0 5px;
+    padding: 5px 5px 1px 5px;
     font-weight: bold;
-    text-decoration: underline;
-    font-size: 16px;
+    font-size: 15px;
+    text-transform: uppercase;
 }
+.titleClass:hover{color: #d1090b;}
 .uploadLookTitle button {
     max-width: 300px;
     margin-left: 20px;
 }
+.lookmeta{padding: 0 5px; font-size: 13px;}
+.lookmeta .author{font-weight: 600;}
 .look-description-trim {
-    padding: 0 5px;
-    background-color: #e1e1e1;
-    border-bottom: 2px solid #ccc;
-    border-top: 1px solid #ccc;
+    padding: 3px 5px;
+    border-bottom: 1px dashed #ddd;
 }
+.lookfoot{margin: 5px;}
+.sharebox a{display: inline-block;}
+.sharebox a img{width: 24px; height: auto;}
 .uploaded-date {
     margin-top: 5px;
     font-size: 14px;
@@ -180,17 +185,15 @@
     padding: 0 5px;
 }
 .likeCount {
-    font-size: 16px;
+    font-size: 14px;
     color: #1e1e1e;
 }
 .viewCount {
-    font-size: 20px;
+    font-size: 14px;
     margin-right: 10px;
     margin-top: 5px;
 }
 .icon-views {
-    margin-right: 10px;
-    margin-top: 4px;
 }
 .close-btn-main button {
     margin-left: 20px;
@@ -208,3 +211,7 @@
 }
 .addTabs a:hover, .addTabs a:focus{text-decoration: none;}
 .addTabs a.active, .addTabs a:focus, .addTabs a:hover{border-bottom: 2px solid #0066ff; color: #fec503;}
+
+.footer{
+    padding: 12px 0; background: #4a515b; color: #fff;
+}

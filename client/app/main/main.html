@@ -39,33 +39,36 @@
             gutter-size="10"
             angular-grid-id="gallery"
             refresh-on-img-load="true">
-            <li data-ng-repeat="look in looks track by $index"
-                class="grid"
-                ng-cloak>
-                <a ui-sref="look ({ lookId: look._id })"
-                   class="lookLink">
-                    <img ng-src="{{ look.image}}"
-                         class="grid-img"
+            <li data-ng-repeat="look in looks track by $index" class="grid" ng-cloak>
+                <a ui-sref="look ({ lookId: look._id })" class="lookLink">
+                    <img ng-src="{{ look.image}}" class="grid-img"
                          data-actual-width="{{ look.actualWidth}}"
                          data-actual-height="{{ look.actualHeight}}" />
-                    <div class="look-description-trim">
-                        {{ look.description.substr(0, 100)}}
-                    </div>
-
                     <div class="titleClass">
                         {{ look.title}} ({{(look.type) ? look.type : 'image'}})
                     </div>
                 </a>
-                <div class="social">
-                    <a href="#"
-                       class="like-look"
-                       ng-click="addVote(look)">
-                        <i class="fa fa-thumbs-o-up fa-2x icon-like"></i></a>
-                    <span class="likeCount">{{ look.upVotes}}</span>
-
-                    <span class="viewCount pull-right">{{ look.views}}</span>
-                    <i class="fa fa-eye fa-2x pull-right icon-views"></i>
-
+                <div class="lookmeta">
+                    <span class="author"><a href="#">{{look.userName}}</a></span>
+                    <span class="date"> , <i class="fa fa-calendar"></i> 05/05/2016</span>
+                </div>
+                <div class="look-description-trim">
+                    {{ look.description.substr(0, 100)}}
+                </div>
+                <div class="lookfoot">
+                    <div class="pull-left">
+                        <span class="likebox">
+                            <a href="#" class="like-look" ng-click="addVote(look)"><i class="fa fa-thumbs-o-up icon-like"></i></a>
+                            <span class="likeCount">{{ look.upVotes}}</span>
+                        </span>
+                        <span class="viewbox">
+                             | <i class="fa fa-eye icon-views"></i> <span class="viewCount">{{ look.views}}</span>
+                        </span>
+                    </div>
+                    <div class="pull-right sharebox">
+                        <div ng-include="'app/components/sharebox.html'"></div>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
             </li>
         </ul>

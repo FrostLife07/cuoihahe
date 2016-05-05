@@ -5,6 +5,8 @@ var Look = require('./look.model');
 var path = require('path');
 var utils = require('../../utils/utils.js');
 
+//vanlam
+var fs = require('fs');
 
 exports.userLooks = function(req, res) {
   var userEmail = req.query.email;
@@ -176,11 +178,14 @@ exports.delete = function(req, res) {
     if(!look) {
       return res.send(404);
     }
+    var image = look.image;
     look.remove(function(error) {
       if(error) {
         return handleError(res, error);
       }
-
+     if(fs.existsSync(image)){
+      fs.unlinkSync(image);
+     }
       return res.send(200);
     });
 
