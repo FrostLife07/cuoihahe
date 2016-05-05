@@ -201,6 +201,7 @@
 
 /*vanlam*/
 .mtitle{font-size: 14px; text-transform: none; margin: 15px 0;}
+.sitedesc{margin-bottom: 10px;}
 .addTabs a{
     color: #000;
     font-size: 15px; font-weight: 600; display: inline-block; margin-right: 10px; border-bottom: 1px solid #ddd;

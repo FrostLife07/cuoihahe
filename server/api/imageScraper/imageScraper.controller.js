@@ -7,6 +7,7 @@ scrapers['pinterest'] = require('./scrapers/pinterest');
 scrapers['facebook'] = require('./scrapers/facebook');
 scrapers['youtube'] = require('./scrapers/youtube');
 scrapers['haivn'] = require('./scrapers/haivn');
+scrapers['giphy'] = require('./scrapers/giphy');
 
 exports.scrape = function (req, res) {
     var url = req.body.url;
@@ -20,6 +21,8 @@ exports.scrape = function (req, res) {
         scraperToUse = 'youtube';
     }else if(url.indexOf('haivn') > -1){
         scraperToUse = 'haivn';
+    }else if(url.indexOf('giphy') > -1){
+        scraperToUse = 'giphy';
     }else{
         console.log('Cannot locate scraper');
     }

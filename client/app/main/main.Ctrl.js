@@ -130,9 +130,13 @@
         };
 
 
-        $scope.addScrapePost = function (type) {
-            type = typeof type !== 'undefined' ? type : 'image';
-            console.log(type);
+        $scope.addScrapePost = function () {
+//            type = typeof type !== 'undefined' ? type : 'image';
+            var type = 'image';
+            var link = $scope.look.link;
+            if(link.indexOf('youtube') > -1){
+                type = 'youtube';
+            }
             var look = {
                 description: $scope.look.description,
                 title: $scope.look.title,
@@ -198,7 +202,7 @@
 
         //vanlam
         var tabUrl = 'app/main/addLookTabs/';
-        $scope.tabLink = tabUrl + 'pinterest-link.html';
+        $scope.tabLink = tabUrl + 'link.html';
         $scope.lookTab = function (tabLink) {
             $scope.tabLink = tabUrl + tabLink;
         };
