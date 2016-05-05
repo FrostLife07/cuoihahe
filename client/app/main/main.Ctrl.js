@@ -131,7 +131,8 @@
 
 
         $scope.addScrapePost = function (type) {
-            type = typeof type !== undefined ? type : 'image';
+            type = typeof type !== 'undefined' ? type : 'image';
+            console.log(type);
             var look = {
                 description: $scope.look.description,
                 title: $scope.look.title,

@@ -66,6 +66,8 @@ exports.scrapeUpload = function(req, res) {
     newLook._createTime = Date.now();
     newLook.upVotes = 0;
     newLook.image = filename.slice(8);
+    //vanlam
+    newLook.type = req.body.type;
     newLook.save(function(error, item) {
       if(error) {
         console.log('Error occured saving image');
@@ -97,6 +99,8 @@ exports.upload = function(req, res) {
   newLook._creator = req.body._creator;
   newLook.createTime = Date.now();
   newLook.upVotes = 0;
+  //vanlam
+  newLook.type = req.body.type;
   newLook.save(function(error, item) {
     if(error) {
       console.log('Error occured saving image');

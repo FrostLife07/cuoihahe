@@ -19,7 +19,8 @@
             updateLook: updateLook,
             deleteLook: deleteLook,
             upVoteLook: upVoteLook,
-            addView: addView
+            addView: addView,
+            getYoutubeId: getYoutubeId
         };
 
         function createScrapeLook(look) {
@@ -64,6 +65,16 @@
 
         function addView(look) {
             return $http.put('/api/look/view/' + look);
+        }
+
+        function getYoutubeId(url) {
+            var ytid = '';
+            var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
+            var match = url.match(regExp);
+            if (match && match[2].length === 11) {
+                ytid = match[2];
+            }
+            return ytid;
         }
     }
 
