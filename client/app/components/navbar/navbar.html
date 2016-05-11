@@ -41,7 +41,7 @@
 
         <li ng-show="isLoggedIn()">
           <img ng-src="{{getCurrentUser().gravatar}}" alt="" class="gravatar-image">
-        <p class="navbar-text">Hello {{ getCurrentUser().name }}</p> </li>
+          <p class="navbar-text" style="margin-bottom: 0;">Hello {{ getCurrentUser().name }}</p> </li>
 
         <li ng-show="isLoggedIn()" ng-class="{active: isActive('/profile')}">
         <a href="/profile"><span class="glyphicon glyphicon-cog"></span></a></li>

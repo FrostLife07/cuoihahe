@@ -2,10 +2,10 @@
   color: #1F1F14;
 }
 .icon-edit {
-  margin-right: 10px;
+  margin-right: 10px; font-size: 20px;
 }
 .like-look {
-  color: #333333;
+  color: #fff;
 }
 .likeCount {
   font-size: 14px;
@@ -14,17 +14,17 @@
 .icon-like {
 }
 .description-textarea {
-  margin-left: 10px;
+  /*margin-left: 10px;*/
 }
 .title-input {
-  margin-left: 10px;
+  /*margin-left: 10px;*/
 }
 .show-no-looks h3 {
   text-align: center;
 }
 .user-looks-title {
   margin: 0 auto;
-  margin-top: 15px;
-  margin-bottom: 23px;
+  margin-top: 5px;
+  margin-bottom: 15px;
   overflow: hidden;
 }

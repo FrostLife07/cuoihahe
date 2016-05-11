@@ -33,7 +33,7 @@
     <div class="container" infinite-scroll="nextPage()"
          infinite-scroll-disabled="busy || noMoreData"
          distance="0.1">
-        <ul class="dynamic-grid angular-grid"
+        <ul class="dynamic-grid angular-grid list-unstyled"
             angular-grid="looks"
             grid-width="275"
             gutter-size="10"
@@ -41,16 +41,21 @@
             refresh-on-img-load="true">
             <li data-ng-repeat="look in looks track by $index" class="grid" ng-cloak>
                 <a ui-sref="look ({ lookId: look._id })" class="lookLink">
-                    <img ng-src="{{ look.image}}" class="grid-img"
-                         data-actual-width="{{ look.actualWidth}}"
-                         data-actual-height="{{ look.actualHeight}}" />
+                    <div class="thumb">
+                        <img ng-src="{{ look.image}}" class="grid-img"
+                            data-actual-width="{{ look.actualWidth}}"
+                            data-actual-height="{{ look.actualHeight}}" />
+                        <span ng-if="(look.type === 'youtube')" class="icon">
+                            <img src="../../assets/images/video-icon.png">
+                        </span>
+                    </div>
                     <div class="titleClass">
-                        {{ look.title}} ({{(look.type) ? look.type : 'image'}})
+                        {{ look.title}}
                     </div>
                 </a>
                 <div class="lookmeta">
                     <span class="author"><a href="#">{{look.userName}}</a></span>
-                    <span class="date"> , <i class="fa fa-calendar"></i> 05/05/2016</span>
+                    <span class="date"> , <i class="fa fa-clock-o"></i> {{secondTime(look.createTime) | date:'dd/MM/yyyy'}}</span>
                 </div>
                 <div class="look-description-trim">
                     {{ look.description.substr(0, 100)}}
@@ -62,7 +67,7 @@
                             <span class="likeCount">{{ look.upVotes}}</span>
                         </span>
                         <span class="viewbox">
-                             | <i class="fa fa-eye icon-views"></i> <span class="viewCount">{{ look.views}}</span>
+                            <i class="fa fa-eye icon-views"></i> <span class="viewCount">{{ look.views}}</span>
                         </span>
                     </div>
                     <div class="pull-right sharebox">

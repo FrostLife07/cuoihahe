@@ -1,6 +1,15 @@
 .navbar-custom-internal a {
   color: #fff;
 }
+nav.navbar-inverse{
+    border-radius: 0;
+    background: #f8f8f8;
+    border: none;
+    box-shadow: 0 0 3px;
+}
+nav.navbar-inverse ul.nav li a:hover{
+    color: #000;
+}
 .navbar-inverse .navbar-logo {
   width: 140px;
 }

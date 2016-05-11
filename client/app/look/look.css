@@ -1,12 +1,10 @@
 .listing-wrap {
   background:#FFF;
-  border:1px solid #ECECEC;
-  box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.15);
-  padding: 0 30px 30px 30px;
+  /*border:1px solid #ECECEC;*/
+  /*box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.15);*/
+  padding: 15px;
 }
 .listing-images img  {
-  border-radius:3px;
-  margin-bottom:20px;
   max-height: 400px;
   max-width: 400px;
   -webkit-transition:all 35s ease-in-out;
@@ -18,10 +16,10 @@
   font-size: 16px;
   margin-bottom: 10px;
 }
-.listing-description {
-  font-size:16px;
+.listing-description, .comment-box form{
   margin-bottom:20px;
 }
+.listing-description h3, .comment-box h3{font-size: 15px;}
 .listing-comments {
   background:#FEFEFE;
   border-radius:3px;
@@ -33,11 +31,12 @@
   border-bottom:1px solid #ECECEC;
 }
 .listing-extra {
-  border: 7px solid #E4F3D9;
-  border-radius: 3px;
-  padding: 20px;
-  margin-top: 20px;
+  /*border: 7px solid #E4F3D9;*/
+  /*border-radius: 3px;*/
+  /*padding: 20px;*/
+  /*margin-top: 20px;*/
 }
+.listing-extra .box-title{font-size: 20px;}
 .listing-extra h1 {
   font-size: 22px;
   line-height:1.2;
@@ -68,10 +67,11 @@
 .thumbnail {
     padding:0px;
 }
-.panel {
-  position:relative;
+.comment .panel {
+  position:relative; margin-left: 7px;
 }
-.panel>.panel-heading:after,.panel>.panel-heading:before{
+.comment .panel-body{padding-top: 10px; padding-bottom: 10px;}
+.comment .panel>.panel-heading:after, .comment .panel>.panel-heading:before{
   position:absolute;
   top:11px;left:-16px;
   right:100%;
@@ -83,13 +83,13 @@
   border-style:solid solid outset;
   pointer-events:none;
 }
-.panel>.panel-heading:after{
+.comment .panel>.panel-heading:after{
   border-width:7px;
   border-right-color:#f7f7f7;
   margin-top:1px;
   margin-left:2px;
 }
-.panel>.panel-heading:before{
+.comment .panel>.panel-heading:before{
   border-right-color:#ddd;
   border-width:8px;
 }
@@ -133,4 +133,19 @@
   font-size: 20px;
   margin-bottom: 5px;
   margin-left: 10px
+}
+.mainLook{
+    background: rgba(0, 0, 0, 0.7); text-align: center;
+}
+.mainLook .thumbLook{display: inline-block;}
+.mainLook iframe{max-width: 100%;}
+.looks .look .meta{font-size: 13px; color: #666666;}
+.look .title{
+    margin-top: 0;
+}
+.look .title, .look .title a{
+    color: #333333;
+}
+.look .title a:hover{
+    color: #fed136; text-decoration: none;
 }

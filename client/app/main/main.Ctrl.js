@@ -22,7 +22,11 @@
         $scope.busy = true;
         $scope.allData = [];
         var step = 3;
-
+        
+        $scope.secondTime = function(createTime){
+            var seconds = new Date(createTime).getTime();  
+            return seconds;
+        };
 
         var alertSuccess = $alert({
             title: 'Success',

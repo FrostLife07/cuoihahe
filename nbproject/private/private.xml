@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/wamp/www/cuoihahe/client/app/main/main.Ctrl.js</file>
-            <file>file:/E:/wamp/www/cuoihahe/server/api/imageScraper/scrapers/youtube.js</file>
-            <file>file:/E:/wamp/www/cuoihahe/server/api/look/look.model.js</file>
-            <file>file:/E:/wamp/www/cuoihahe/server/api/imageScraper/index.js</file>
-            <file>file:/E:/wamp/www/cuoihahe/server/api/imageScraper/scrapers/pinterest.js</file>
-            <file>file:/E:/wamp/www/cuoihahe/client/app/main/addLookTabs/facebook-link.html</file>
-            <file>file:/E:/wamp/www/cuoihahe/client/app/main/addLookTabs/youtube-link.html</file>
-            <file>file:/E:/wamp/www/cuoihahe/client/app/main/main.html</file>
-            <file>file:/E:/wamp/www/cuoihahe/server/api/imageScraper/imageScraper.controller.js</file>
-            <file>file:/E:/wamp/www/cuoihahe/server/api/look/index.js</file>
-            <file>file:/E:/wamp/www/cuoihahe/client/app/look/lookDetailView.html</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

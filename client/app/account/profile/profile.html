@@ -1,33 +1,34 @@
 <div class="container">
     <div class="row">
-      <div class="col-md-8">
-        <div class="profile">
-          <h1 class="page-header">{{ profileInfo.name }}</h1>
-          <div class="row">
-            <div class="col-md-4">
-              <img src="{{getCurrentUser().gravatar}}" class="img-thumbnail">
+        <div class="col-md-8">
+            <div class="profile">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{getCurrentUser().gravatar}}" class="img-thumbnail">
+                    </div>
+                    <div class="col-md-8 profile">
+                        <h1 class="single-title">{{ profileInfo.name }}</h1>
+                        <ul>
+                            <li><strong>Name:</strong> {{ profileInfo.name }}</li>
+                            <li><strong>Email:</strong> {{profileInfo.email}}</li>
+                            <li><strong>Website: </strong>{{ profileInfo.website }}</li>
+                            <li><strong>Location: </strong>{{ profileInfo.location }}</li>
+                            <li><strong>Bio: </strong>{{ profileInfo.interests }}</li>
+                        </ul>
+                        <br><br>
+                        <div class="icon-container">
+                            <div class="col-md-1">
+                                <i class="fa fa-twitter fa-2x icon-picker"></i>
+                            </div>
+                            <div class="col-md-1">
+                                <i class="fa fa-facebook fa-2x icon-picker"></i>
+                            </div>
+                            <div class="col-md-1">
+                                <i class="fa fa-instagram fa-2x icon-picker"></i></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-5 profile">
-              <ul>
-                <li><strong>Name:</strong> {{ profileInfo.name }}</li>
-                <li><strong>Website: </strong>{{ profileInfo.website }}</li>
-                <li><strong>Location: </strong>{{ profileInfo.location }}</li>
-                <li><strong>Bio: </strong>{{ profileInfo.interests }}</li>
-              </ul>
-              <br><br>
-              <div class="icon-container">
-            <div class="col-md-1">
-              <i class="fa fa-twitter fa-2x icon-picker"></i>
-            </div>
-            <div class="col-md-1">
-              <i class="fa fa-facebook fa-2x icon-picker"></i>
-            </div>
-            <div class="col-md-1">
-              <i class="fa fa-instagram fa-2x icon-picker"></i></div>
-            </div>
-          </div>
         </div>
-      </div>
-  </div>
-</div>
+    </div>
 </div>

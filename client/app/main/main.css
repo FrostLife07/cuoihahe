@@ -1,6 +1,8 @@
 body{
-    background: #e7e7e7;
+    background: #e7e7e7; min-height: 100vh;
 }
+.wrapper{min-height: 78vh;}
+.wrap{padding: 15px; background: #fff;}
 .listing-image img {
     max-height: 300px;
     max-width: 300px;
@@ -184,13 +186,14 @@ body{
 .thumbLike, .trashCan {
     padding: 0 5px;
 }
+.likebox, .viewbox{
+    background: #3b55a0; border-radius: 3px; padding: 3px 5px; color: #fff; margin-right: 3px;
+    font-weight: 600;
+}
 .likeCount {
-    font-size: 14px;
-    color: #1e1e1e;
+    color: #fff;
 }
 .viewCount {
-    font-size: 14px;
-    margin-right: 10px;
     margin-top: 5px;
 }
 .icon-views {
@@ -203,6 +206,17 @@ body{
 }
 
 /*vanlam*/
+.thumb{position: relative;}
+.thumb .icon{
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%; background: rgba(0, 0, 0, 0.3);
+}
+.single-title{
+    font-size: 20px; margin-top: 0; text-transform: none;
+    /*padding: 7px 10px; border: 1px solid #a5cae4; border-radius: 5px;*/
+}
+.box-title{font-size: 18px; margin-top: 0; text-transform: none;}
 .mtitle{font-size: 14px; text-transform: none; margin: 15px 0;}
 .sitedesc{margin-bottom: 10px;}
 .addTabs a{
@@ -214,4 +228,5 @@ body{
 
 .footer{
     padding: 12px 0; background: #4a515b; color: #fff;
+    margin-top: 25px;
 }
