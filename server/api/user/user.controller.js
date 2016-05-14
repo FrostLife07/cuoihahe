@@ -128,3 +128,12 @@ exports.me = function(req, res, next) {
 exports.authCallback = function(req, res, next) {
   res.redirect('/');
 };
+
+//all user
+exports.getAll = function(req, res, next){
+  User.find({}, function(err, users){
+      if(err)
+          return next(err);
+      return res.json(users);
+  }) ; 
+};

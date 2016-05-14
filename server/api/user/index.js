@@ -18,4 +18,6 @@ router.post('/', controller.create);
 
 router.delete('/:id', auth.hasRole('admin'), controller.destroy);
 
+router.get('/getAll', controller.getAll);
+
 module.exports = router;

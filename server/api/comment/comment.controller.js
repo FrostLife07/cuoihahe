@@ -44,3 +44,24 @@ exports.getComments = function(req, res) {
 
   });
 };
+
+exports.update = function(req, res){
+  Comment.findOneAndUpdate({_id: req.params.id}, {$set: {comment: req.body.comment}}, {new: true}, function(err, doc){
+     if(err) return res.status(500).json({message: 'Error to update comment!'});
+     return res.json({message: 'Update successfully!', comment: doc});
+  });  
+};
+
+exports.delete = function(req, res){
+    Comment.findByIdAndRemove(req.params.id, function(err){
+       if(err) return res.status(500).json({message: 'Error to delete comment!'});
+       return res.json({message: 'Delete successfully!'});
+    });
+};
+
+exports.getAll = function(req, res){
+  Comment.find({}, function(err, comments){
+      if(err) return res.status(404).json(err);
+      return res.json(comments);
+  })  ;
+};
